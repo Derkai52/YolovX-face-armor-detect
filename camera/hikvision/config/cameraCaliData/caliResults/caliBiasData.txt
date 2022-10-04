@@ -1,0 +1,9 @@
+The maximum reprojection error of the 0 image: 0.33571 pixel
+The maximum reprojection error of the 1 image: 0.118587 pixel
+The maximum reprojection error of the 2 image: 0.1611 pixel
+The maximum reprojection error of the 3 image: 0.256043 pixel
+The maximum reprojection error of the 4 image: 0.149994 pixel
+The maximum reprojection error of the 5 image: 0.190447 pixel
+The maximum reprojection error of the 6 image: 0.281615 pixel
+The maximum reprojection error of the 7 image: 0.278049 pixel
+The maximum reprojection error of the 8 image: 0.240236 pixel
