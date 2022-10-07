@@ -1,0 +1,140 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.13"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>YoloXArmor: camera::HikCamera类 参考</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectlogo"><img alt="Logo" src="2022-10-06 09-53-47 的屏幕截图.png"/></td>
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">YoloXArmor
+   &#160;<span id="projectnumber">1.0.1</span>
+   </div>
+   <div id="projectbrief">A End-to-end armor plate target detection</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 制作者 Doxygen 1.8.13 -->
+<script type="text/javascript">
+var searchBox = new SearchBox("searchBox", "search",false,'搜索');
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+$(function() {
+  initMenu('',true,false,'search.php','搜索');
+  $(document).ready(function() { init_search(); });
+});
+</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><b>camera</b></li><li class="navelem"><a class="el" href="classcamera_1_1_hik_camera.html">HikCamera</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="summary">
+<a href="#nested-classes">类</a> &#124;
+<a href="#pub-methods">Public 成员函数</a> &#124;
+<a href="#pub-static-methods">静态 Public 成员函数</a> &#124;
+<a href="classcamera_1_1_hik_camera-members.html">所有成员列表</a>  </div>
+  <div class="headertitle">
+<div class="title">camera::HikCamera类 参考</div>  </div>
+</div><!--header-->
+<div class="contents">
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+类</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structcamera_1_1_hik_camera_1_1_camera_calibration_struct.html">CameraCalibrationStruct</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public 成员函数</h2></td></tr>
+<tr class="memitem:a0c74065cae919f94063e5b06d3453cb9"><td class="memItemLeft" align="right" valign="top"><a id="a0c74065cae919f94063e5b06d3453cb9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>Init</b> (bool debug_flag, const std::string &amp;config_path, const std::string &amp;intrinsic_para_file_path, std::chrono::_V2::steady_clock::time_point time_start)</td></tr>
+<tr class="separator:a0c74065cae919f94063e5b06d3453cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac56bb385e077ac8248822f313f87cbb9"><td class="memItemLeft" align="right" valign="top"><a id="ac56bb385e077ac8248822f313f87cbb9"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>PrintDeviceInfo</b> (<a class="el" href="struct___m_v___c_c___d_e_v_i_c_e___i_n_f_o__.html">MV_CC_DEVICE_INFO</a> *pstMVDevInfo)</td></tr>
+<tr class="separator:ac56bb385e077ac8248822f313f87cbb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8c297c06d99d68b3315a8388b4e11134"><td class="memItemLeft" align="right" valign="top"><a id="a8c297c06d99d68b3315a8388b4e11134"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>CamInfoShow</b> ()</td></tr>
+<tr class="separator:a8c297c06d99d68b3315a8388b4e11134"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac52caa313f88692b47b1a0d6eb4ab321"><td class="memItemLeft" align="right" valign="top"><a id="ac52caa313f88692b47b1a0d6eb4ab321"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>set</b> (camera::CamerProperties type, float value)</td></tr>
+<tr class="separator:ac52caa313f88692b47b1a0d6eb4ab321"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af08a74edafef667b8c89b21b2ac75d85"><td class="memItemLeft" align="right" valign="top"><a id="af08a74edafef667b8c89b21b2ac75d85"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>reset</b> ()</td></tr>
+<tr class="separator:af08a74edafef667b8c89b21b2ac75d85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c4764cc5f40090140bfb980974f3fd8"><td class="memItemLeft" align="right" valign="top"><a id="a6c4764cc5f40090140bfb980974f3fd8"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>ReadImg</b> (cv::Mat &amp;image)</td></tr>
+<tr class="separator:a6c4764cc5f40090140bfb980974f3fd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3382671edea040badf1b822f79842015"><td class="memItemLeft" align="right" valign="top"><a id="a3382671edea040badf1b822f79842015"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>undistProcess</b> (cv::Mat src)</td></tr>
+<tr class="separator:a3382671edea040badf1b822f79842015"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afefc9042b72cbdb6bc4fd2f92621a77c"><td class="memItemLeft" align="right" valign="top"><a id="afefc9042b72cbdb6bc4fd2f92621a77c"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>readParams</b> ()</td></tr>
+<tr class="separator:afefc9042b72cbdb6bc4fd2f92621a77c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0aa4210627755a95e9723e1cc4811166"><td class="memItemLeft" align="right" valign="top"><a id="a0aa4210627755a95e9723e1cc4811166"></a>
+<a class="el" href="structcamera_1_1_hik_camera_1_1_camera_calibration_struct.html">CameraCalibrationStruct</a>&#160;</td><td class="memItemRight" valign="bottom"><b>readCalibrationData</b> (const std::string &amp;filename)</td></tr>
+<tr class="separator:a0aa4210627755a95e9723e1cc4811166"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab800083a3191244de4f1bdb91f1573ed"><td class="memItemLeft" align="right" valign="top"><a id="ab800083a3191244de4f1bdb91f1573ed"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>UpdateTimestampOffset</b> (std::chrono::_V2::steady_clock::time_point time_start)</td></tr>
+<tr class="separator:ab800083a3191244de4f1bdb91f1573ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a81754623c4ea7ddf7b078197a0f021c1"><td class="memItemLeft" align="right" valign="top"><a id="a81754623c4ea7ddf7b078197a0f021c1"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>Get_TIMESTAMP</b> ()</td></tr>
+<tr class="separator:a81754623c4ea7ddf7b078197a0f021c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+静态 Public 成员函数</h2></td></tr>
+<tr class="memitem:a40bb96bd7e575f346040d42632aa9e65"><td class="memItemLeft" align="right" valign="top"><a id="a40bb96bd7e575f346040d42632aa9e65"></a>
+static void *&#160;</td><td class="memItemRight" valign="bottom"><b>HKWorkThread</b> (void *arg)</td></tr>
+<tr class="separator:a40bb96bd7e575f346040d42632aa9e65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1b6ac6f8b9391eb66e21e0b567bbd06"><td class="memItemLeft" align="right" valign="top"><a id="ab1b6ac6f8b9391eb66e21e0b567bbd06"></a>
+static void&#160;</td><td class="memItemRight" valign="bottom"><b>DebugCam</b> (void *p_handle, <a class="el" href="struct___m_v___c_c___d_e_v_i_c_e___i_n_f_o__.html">MV_CC_DEVICE_INFO</a> *pDeviceInfo)</td></tr>
+<tr class="separator:ab1b6ac6f8b9391eb66e21e0b567bbd06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<hr/>该类的文档由以下文件生成:<ul>
+<li>camera/hikvision/include/<a class="el" href="hikvision__camera_8h_source.html">hikvision_camera.h</a></li>
+<li>camera/hikvision/src/hikvision_camera.cpp</li>
+</ul>
+</div><!-- contents -->
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+制作者 &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.13
+</small></address>
+</body>
+</html>

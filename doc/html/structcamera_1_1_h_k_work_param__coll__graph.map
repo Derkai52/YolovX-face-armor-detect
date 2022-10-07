@@ -1,0 +1,6 @@
+<map id="camera::HKWorkParam" name="camera::HKWorkParam">
+<area shape="rect" id="node2" href="$struct___m_v___c_c___d_e_v_i_c_e___i_n_f_o__.html" title="_MV_CC_DEVICE_INFO_" alt="" coords="231,95,411,121"/>
+<area shape="rect" id="node3" href="$struct___m_v___g_i_g_e___d_e_v_i_c_e___i_n_f_o__.html" title="_MV_GIGE_DEVICE_INFO_" alt="" coords="5,5,199,32"/>
+<area shape="rect" id="node4" href="$struct___m_v___u_s_b3___d_e_v_i_c_e___i_n_f_o__.html" title="_MV_USB3_DEVICE_INFO_" alt="" coords="223,5,418,32"/>
+<area shape="rect" id="node5" href="$struct___m_v___cam_l___d_e_v___i_n_f_o__.html" title="_MV_CamL_DEV_INFO_" alt="" coords="443,5,615,32"/>
+</map>

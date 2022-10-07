@@ -1,6 +1,5 @@
 #include "hikvision_camera.h"
 #include <yaml-cpp/yaml.h>
-#include <fstream>
 #include <iostream>
 #include "debug/camera_parms_debug.h"
 

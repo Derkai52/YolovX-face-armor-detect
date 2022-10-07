@@ -48,6 +48,4 @@ private:
     Eigen::Matrix<float,3,3> transfrom_matrix;
 };
 
-
-
 #endif //YOLOXARMOR_INFERENCE_H

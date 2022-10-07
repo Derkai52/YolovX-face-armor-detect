@@ -34,7 +34,7 @@ INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/general/include)
 INCLUDE_DIRECTORIES(${HIKVISION_CAMERA_DIR}/include) # 指定相机库目录
 INCLUDE_DIRECTORIES(${HIKVISION_CAMERA_DIR}/tool/include) # 指定相机库目录
 
-FILE(GLOB_RECURSE sourcefiles "detector/src/*.cpp" "general/src/*.cpp" "${HIKVISION_CAMERA_DIR}/src/*.cpp" "${HIKVISION_CAMERA_DIR}/tool/src/*.cpp" debug.h)
+FILE(GLOB_RECURSE sourcefiles "detector/src/*.cpp" "general/src/*.cpp" "${HIKVISION_CAMERA_DIR}/src/*.cpp" "${HIKVISION_CAMERA_DIR}/tool/src/*.cpp")
 ADD_EXECUTABLE(${BIN_NAME} main.cpp ${sourcefiles} )
 
 TARGET_LINK_LIBRARIES(${BIN_NAME} ${CMAKE_THREAD_LIBS_INIT}

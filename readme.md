@@ -3,7 +3,7 @@
 ### 特别致谢：
 `沈阳航空航天大学` 视觉开源项目团队！
 
-https://github.com/tup-robomaster/TUP-InfantryVision-2022/
+https://github.com/tup-robomaster/TUP-InfantryVision-2022.git
 
 ### 一、项目说明
 本项目实现了以下内容：

@@ -1,0 +1,27 @@
+\subsubsection*{使用方法：}
+
+1、固定好相机的各种设置,确定 {\ttfamily 横、纵} 方向上检测角点数，标定板边缘角点不计
+
+2、从不同的角度拍摄标定板（示例已提供标定用的图片）
+
+3、将拍摄的图片存入 {\ttfamily cali\+Pattern} 文件夹，命名从下标 {\ttfamily 0} 开始按顺序命名，例如：\char`\"{}`0.\+jpg`  `1.\+jpg` ...\char`\"{}
+
+4、运行示例，在 {\ttfamily cali\+Results} 文件夹下生成 {\bfseries 标定文件} 和 {\bfseries 误差记录文件}
+
+5、使用标定文件的数据
+
+\subsubsection*{cali\+Bias\+Data.\+txt 文件说明}
+
+本文件记录每张图像标定生成的重投影误差，标定结果良好的推荐指标是不超过 {\ttfamily 0.\+5 pixel}，超出该值或误差明显提升的图需要重新拍摄。
+
+\subsubsection*{calib\+Camera\+Data.\+yml 文件说明}
+
+本文件包含标定后生成的 {\bfseries 相机内参} 和 {\bfseries 畸变系数} 数据
+
+\subsection*{特别鸣谢}
+
+{\ttfamily 桂林电子科技大学} 的开源项目为本项目提供了思路：
+
+\href{https://github.com/freezing00/Baldr}{\tt https\+://github.\+com/freezing00/\+Baldr}
+
+如果你有更好的想法，欢迎 Issues 和 PR ！ 
