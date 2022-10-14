@@ -354,8 +354,7 @@ bool ArmorDetector::detect(Mat &src,std::vector<ArmorObject>& objects)
 {
     if (src.empty())
     {
-        fmt::print(fmt::fg(fmt::color::red), "[DETECT] ERROR: 传入了空的src\n");
-        LOG(ERROR) << "[DETECT] ERROR: 传入了空的src";
+        std::cout << " ERROR: 传入了空的src " << std::endl;
         return false;
     }
     cv::Mat pr_img = scaledResize(src,transfrom_matrix);

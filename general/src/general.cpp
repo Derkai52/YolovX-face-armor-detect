@@ -11,7 +11,6 @@ float calcTriangleArea(cv::Point2f pts[3])
     auto a = sqrt(pow((pts[0] - pts[1]).x, 2) + pow((pts[0] - pts[1]).y, 2));
     auto b = sqrt(pow((pts[1] - pts[2]).x, 2) + pow((pts[1] - pts[2]).y, 2));
     auto c = sqrt(pow((pts[2] - pts[0]).x, 2) + pow((pts[2] - pts[0]).y, 2));
-
     auto p = (a + b + c) / 2.f;
 
     return sqrt(p * (p - a) * (p - b) * (p - c));

@@ -16,8 +16,6 @@ add_definitions(-D _GLIBCXX_USE_CXX11_ABI=1)
 add_compile_definitions(PROJECT_DIR="${PROJECT_SOURCE_DIR}")
 
 FIND_PACKAGE(InferenceEngine REQUIRED)
-FIND_PACKAGE(fmt REQUIRED)
-FIND_PACKAGE(glog REQUIRED)
 FIND_PACKAGE(Eigen3 REQUIRED)
 FIND_PACKAGE(OpenCV 4 REQUIRED)
 FIND_PACKAGE(Threads)
@@ -42,8 +40,6 @@ TARGET_LINK_LIBRARIES(${BIN_NAME} ${CMAKE_THREAD_LIBS_INIT}
                                   ${Eigen3_LIBRARIES}
                                   ${InferenceEngine_LIBRARIES}
                                   ${YAML_CPP_LIBRARIES}
-                                  fmt::fmt
-                                  glog
                                   MvCameraControl)
 
 # 设置配置文件夹的绝对路径

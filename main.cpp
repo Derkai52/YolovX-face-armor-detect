@@ -61,7 +61,7 @@ int main() {
 
         auto time_predict = std::chrono::steady_clock::now();
         double dr_full_ms = std::chrono::duration<double,std::milli>(time_predict - time_start).count();
-        putText(image2show, fmt::format("FPS: {}",int(1000 / dr_full_ms)), {10, 25}, FONT_HERSHEY_SIMPLEX, 1, {0,255,0});
+        putText(image2show, "FPS: "+to_string(int(1000 / dr_full_ms)), {10, 25}, FONT_HERSHEY_SIMPLEX, 1, {0,255,0});
         cout <<"[AUTOAIM] LATENCY: "<< " Total: " << dr_full_ms << " ms"<< endl;
 
         imshow("output", image2show);
