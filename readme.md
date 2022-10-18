@@ -26,5 +26,3 @@ https://github.com/tup-robomaster/TUP-InfantryVision-2022.git
 
 ### 四、环境要求
 * [OpenVINO 2021 及以上版本(带 OpenCV 4.X)](https://docs.openvino.ai/cn/latest/get_started.html)
-* [海康机器人相机SDK](https://www.hikrobotics.com/cn/machinevision/service/download)
-* [Yaml-cpp](https://github.com/jbeder/yaml-cpp)

@@ -2,37 +2,30 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include "inference.h"
-#include "hikvision_camera.h"
 
 using namespace std;
 using namespace cv;
-using namespace camera;
 
 cv::Mat ori_src;
 cv::Mat image2show;
 VideoCapture capture;
 ArmorDetector detector;
-HikCamera MVS_cap; // 创建一个相机对象
 
 void display(ArmorObject);
 
 int main() {
-    // 选择视频源 (1、海康相机  0、视频文件)
+    // 选择视频源 (1、免驱相机  0、视频文件)
     int from_camera = 0;
 
     if (from_camera) {
-        const string camera_config_path = HIK_CONFIG_FILE_PATH"/camera_config.yaml";  // 相机配置文件路径
-        const string intrinsic_para_path = HIK_CALI_FILE_PATH"/caliResults/calibCameraData.yml"; // 相机内参文件路径
-        auto time_start = std::chrono::steady_clock::now(); // 记录相机初始化时间戳
-        MVS_cap.Init(true, camera_config_path, intrinsic_para_path, time_start);  // 初始化海康相机
-        MVS_cap.CamInfoShow(); // 显示图像参数信息
+        capture.open(0);
     } else {
-        string filename = PROJECT_DIR"/videoTest/armor_red.mp4";
+        string filename = PROJECT_DIR"/videoTest/armor_red.avi";
         capture.open(filename);
-        if(!capture.isOpened()){
-            printf("video_source can not open ...\n");
-            return -1;
-        }
+    }
+    if(!capture.isOpened()){
+        printf("video can not open ...\n");
+        return -1;
     }
 
     // 初始化网络模型
@@ -42,7 +35,7 @@ int main() {
     while (true){
         auto time_start=std::chrono::steady_clock::now();
         if (from_camera) {
-            MVS_cap.ReadImg(ori_src); // 相机取图
+            capture.read(ori_src); // 相机取图
             if (ori_src.empty()) { // 相机开启线程需要一定时间
                 continue;
             }
