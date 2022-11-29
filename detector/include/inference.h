@@ -16,15 +16,16 @@ using namespace std;
 using namespace cv;
 using namespace InferenceEngine;
 
+// tips: 这里灯条四点坐标用数组和容器存储都是一样的内容，只是为了方便代码调用
 struct ArmorObject
 {
-    Point2f apex[4];              // 灯条四点坐标
+    Point2f apex[4];              // 灯条四点坐标（左上点起始逆时针）
     cv::Rect_<float> rect;        // 灯条四点矩形
     int cls;                      // 类别 (0:哨兵 1:英雄 2：工程 3、4、5：步兵 6：前哨站 7：基地)
     int color;                    // 颜色分类 (0:蓝色 1:红色 2:灰色)
     int area;                     // 矩形面积大小
     float prob;                   // 分类置信度
-    std::vector<cv::Point2f> pts; // 灯条四点坐标
+    std::vector<cv::Point2f> pts; // 灯条四点坐标（左上点起始逆时针）
 };
 
 
