@@ -1,4 +1,4 @@
-## YolovX-Face -- OpenVINO 装甲板四点检测 (iGPU)
+# YolovX-Face -- OpenVINO 装甲板四点检测 (iGPU)
 
 ### 特别致谢：
 `沈阳航空航天大学` 视觉开源项目团队！
@@ -12,6 +12,20 @@ https://github.com/tup-robomaster/TUP-InfantryVision-2022.git
 * 场景泛化性强，极大减少参数调试压力
 
 ![演示示例](./detect_display.png)
+
+### 网络推理输出结果
+~~~ c++ 
+struct ArmorObject // tips: 这里灯条四点坐标用数组和容器存储都是一样的内容，只是为了方便代码调用
+{
+    Point2f apex[4];              // 灯条四点坐标（左上点起始逆时针）
+    cv::Rect_<float> rect;        // 灯条四点矩形
+    int cls;                      // 类别 (0:哨兵 1:英雄 2：工程 3、4、5：步兵 6：前哨站 7：基地)
+    int color;                    // 颜色分类 (0:蓝色 1:红色 2:灰色)
+    int area;                     // 矩形面积大小
+    float prob;                   // 分类置信度
+    std::vector<cv::Point2f> pts; // 灯条四点坐标（左上点起始逆时针）
+};
+~~~
 
 ### 二、工作条件
 务必保证摄像头焦距正确，同时镜片干净无污物。
