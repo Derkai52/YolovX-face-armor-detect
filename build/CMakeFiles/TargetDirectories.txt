@@ -1,0 +1,3 @@
+/home/matrix/Desktop/reference-project/YolovX-face-armor-detect/build/CMakeFiles/rebuild_cache.dir
+/home/matrix/Desktop/reference-project/YolovX-face-armor-detect/build/CMakeFiles/edit_cache.dir
+/home/matrix/Desktop/reference-project/YolovX-face-armor-detect/build/CMakeFiles/run.dir

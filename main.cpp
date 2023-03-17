@@ -2,6 +2,7 @@
 #include <opencv2/core/core.hpp>
 #include <opencv2/highgui/highgui.hpp>
 #include "inference.h"
+#include "MVCameraInput.h"
 
 using namespace std;
 using namespace cv;
@@ -10,23 +11,26 @@ cv::Mat ori_src;
 cv::Mat image2show;
 VideoCapture capture;
 ArmorDetector detector;
+MVCameraInput cam;
 
 void display(ArmorObject);
 
 int main() {
+
     // 选择视频源 (1、免驱相机  0、视频文件)
-    int from_camera = 0;
+    int from_camera = 1;
 
     if (from_camera) {
-        capture.open(0);
+        cam >> ori_src;
     } else {
         string filename = PROJECT_DIR"/videoTest/armor_red.avi";
         capture.open(filename);
     }
-    if(!capture.isOpened()){
+    if (!(cam.isOpened())){
         printf("video can not open ...\n");
         return -1;
     }
+
 
     // 初始化网络模型
     const string network_path = PROJECT_DIR"/model/opt-0517-001.xml";
@@ -35,7 +39,7 @@ int main() {
     while (true){
         auto time_start=std::chrono::steady_clock::now();
         if (from_camera) {
-            capture.read(ori_src); // 相机取图
+            cam >> ori_src; // 相机取图
             if (ori_src.empty()) { // 相机开启线程需要一定时间
                 continue;
             }
@@ -56,7 +60,7 @@ int main() {
         double dr_full_ms = std::chrono::duration<double,std::milli>(time_predict - time_start).count();
         putText(image2show, "FPS: "+to_string(int(1000 / dr_full_ms)), {10, 25}, FONT_HERSHEY_SIMPLEX, 1, {0,255,0});
         cout <<"[AUTOAIM] LATENCY: "<< " Total: " << dr_full_ms << " ms"<< endl;
-
+        
         imshow("output", image2show);
         waitKey(1);
     }
