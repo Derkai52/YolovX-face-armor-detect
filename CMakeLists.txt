@@ -1,7 +1,7 @@
 CMAKE_MINIMUM_REQUIRED(VERSION 3.5)
 
 PROJECT(yoloXArmor)
-SET(CMAKE_CXX_STANDARD 11)
+SET(CMAKE_CXX_STANDARD 14)
 SET(CMAKE_BUILD_TYPE RELEASE)
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -O3")
 SET(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DPATH=\"\\\"${PROJECT_SOURCE_DIR}\\\"\"")
@@ -15,6 +15,7 @@ add_compile_definitions(PROJECT_DIR="${PROJECT_SOURCE_DIR}")
 
 FIND_PACKAGE(InferenceEngine REQUIRED)
 FIND_PACKAGE(Eigen3 REQUIRED)
+SET(OpenCV_DIR "/opt/intel/openvino_2021/opencv/cmake")
 FIND_PACKAGE(OpenCV 4 REQUIRED)
 FIND_PACKAGE(Threads)
 
@@ -26,12 +27,14 @@ LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/detector)
 LINK_DIRECTORIES(${PROJECT_SOURCE_DIR}/general)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/detector/include)
 INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/general/include)
+INCLUDE_DIRECTORIES(${PROJECT_SOURCE_DIR}/mindvision-cam-wrapper/include)
 
-FILE(GLOB_RECURSE sourcefiles "detector/src/*.cpp" "general/src/*.cpp")
+FILE(GLOB_RECURSE sourcefiles "detector/src/*.cpp" "general/src/*.cpp" "mindvision-cam-wrapper/src/*.cpp")
 ADD_EXECUTABLE(${BIN_NAME} main.cpp ${sourcefiles} )
 
 TARGET_LINK_LIBRARIES(${BIN_NAME} ${CMAKE_THREAD_LIBS_INIT}
                                   ${OpenCV_LIBS}
                                   ${Eigen3_LIBRARIES}
                                   ${InferenceEngine_LIBRARIES}
+                                  MVSDK
                                   )

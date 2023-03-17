@@ -1,0 +1,7 @@
+# ninja log v5
+0	1962	1679059887245288026	CMakeFiles/run.dir/mindvision-cam-wrapper/src/VideoInput.cpp.o	b00b923ca51806ee
+0	2061	1679059887345289435	CMakeFiles/run.dir/mindvision-cam-wrapper/src/MVCameraInput.cpp.o	cc54135b1dba8a6
+0	2436	1679059887717294677	CMakeFiles/run.dir/general/src/general.cpp.o	7bc41559153a6d0b
+0	3682	1679059888965312263	CMakeFiles/run.dir/main.cpp.o	2774a9afa5c00d70
+0	4794	1679059890077327933	CMakeFiles/run.dir/detector/src/inference.cpp.o	a25bd3d4d6414717
+4794	4923	1679059890205329737	run	725c92459e83c844
